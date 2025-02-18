@@ -9,7 +9,11 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "main.py"
+      "dest": "/main.py"
     }
-  ]
+  ],
+  "env": {
+    "PORT": "7000"
+  },
+  "start": "uvicorn main:app --host 0.0.0.0 --port $PORT"
 }
