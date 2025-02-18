@@ -127,7 +127,9 @@ async def get_book_info(ISBN: str):
         return {
             "code":100
         }
-
+@app.get('/')
+async def getMes():
+    return {"code":200}
 if __name__ == '__main__':
     uvicorn.run(app, port=7000)
 
